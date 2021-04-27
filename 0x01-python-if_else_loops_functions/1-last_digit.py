@@ -15,5 +15,5 @@ if last_digit < 6 and last_digit != 0:
 elif last_digit == 0:
     print("{} {} is {} and is 0".format(str, number, last_digit))
 elif last_digit > 5:
-    str01 = "and is grater than 5"
+    str01 = "and is greater than 5"
     print("{} {} is {} {}".format(str, number, last_digit, str01))
