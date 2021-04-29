@@ -11,4 +11,3 @@ if __name__ == "__main__":
         print("{:d} arguments".format(argc))
         for i in range(1, argc + 1):
             print("{:d}: {:s}".format(i, argv[i]))
-        
