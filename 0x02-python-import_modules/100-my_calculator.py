@@ -10,22 +10,12 @@ if __name__ == "__main__":
         a = int(argv[1])
         operator = argv[2]
         b = int(argv[3])
-        if operator == "+":
-            result = add(a, b)
-            print("{} {} {} = {}".format(a, operator, b, result))
-        elif operator == "-":
-            result = sub(a, b)
-            print("{} {} {} = {}".format(a, operator, b, result))
-        elif operator == "*":
-            result = mul(a, b)
-            print("{} {} {} = {}".format(a, operator, b, result))
-        elif operator == "/":
-            if b == 0:
-                print("Invalid second argument")
-                exit(0)
+        operator = ["+", "-", "*", "/"]
+        function = [add, sub, mul, div]
+        for i, op in enumerate(operator):
+            if argv[2] == op:
+                print("{} {} {} = {}".format(a, op, b, function[i](a, b)))
+                break
             else:
-                result = div(a, b)
-                print("{} {} {} = {}".format(a, operator, b, result))
-        else:
-            print("Unknown operator. Available operators: +, -, * and /")
-            exit(1)
+                print("Unknown operator. Available operators: +, -, * and /")
+                exit(1)
