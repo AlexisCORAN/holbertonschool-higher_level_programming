@@ -8,7 +8,6 @@ if __name__ == "__main__":
         exit(1)
     else:
         a = int(argv[1])
-        operator = argv[2]
         b = int(argv[3])
         operator = ["+", "-", "*", "/"]
         function = [add, sub, mul, div]
