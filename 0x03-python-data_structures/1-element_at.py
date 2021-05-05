@@ -6,5 +6,6 @@ def element_at(my_list, idx):
         idx += 1
         for count, num in enumerate(my_list):
             if num == idx:
-                break
-        return (num)
+                return (num)
+        else:
+            return (None)
