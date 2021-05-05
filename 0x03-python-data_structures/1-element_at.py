@@ -3,7 +3,8 @@ def element_at(my_list, idx):
     if idx < 0:
         return (None)
     else:
-        for num in my_list:
+        idx += 1
+        for count, num in enumerate(my_list):
             if num == idx:
                 break
         return (num)
