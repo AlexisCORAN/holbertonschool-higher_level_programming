@@ -4,9 +4,9 @@ def new_in_list(my_list, idx, element):
     if idx < 0:
         return (new_list)
     else:
-        for count, num in enumerate(my_list):
+        for count, num in enumerate(new_list):
             if count == idx:
-                my_list[count] = element
+                new_list[count] = element
                 return (new_list)
         else:
             return (new_list)
