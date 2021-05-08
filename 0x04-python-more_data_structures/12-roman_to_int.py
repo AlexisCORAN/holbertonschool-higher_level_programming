@@ -10,7 +10,7 @@ def roman_to_int(roman_string):
         'I': 1
     }
     if roman_string is None or roman_string != str:
-        return none
+        return 0
     num = 0
     for i in range(len(roman_string)):
         if i > 0 and roman[roman_string[i]] > roman[roman_string[i - 1]]:
