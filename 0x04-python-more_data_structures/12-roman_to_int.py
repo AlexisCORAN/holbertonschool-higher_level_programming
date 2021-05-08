@@ -9,7 +9,7 @@ def roman_to_int(roman_string):
         'V': 5,
         'I': 1
     }
-    if roman_string is None or roman_string != str:
+    if roman_string is None and roman_string != str:
         return 0
     else:
         num = 0
