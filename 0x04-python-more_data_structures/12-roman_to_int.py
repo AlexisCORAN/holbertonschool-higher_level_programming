@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
 
-    if roman_string is None and roman_string != str:
+    if type(roman_string) is not str or roman_string is None:
         return 0
 
     roman = {
@@ -15,6 +15,7 @@ def roman_to_int(roman_string):
     }
 
     num = 0
+
     for i in range(len(roman_string)):
         if i > 0 and roman[roman_string[i]] > roman[roman_string[i - 1]]:
             num += roman[roman_string[i]] - 2 * roman[roman_string[i - 1]]
