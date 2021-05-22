@@ -1,0 +1,50 @@
+#0-add_integer.txt
+
+==================
+How to use 0-add_integer.txt
+==================
+
+This library is very simple, since it only has one funcion called
+``add_integer(a, b=98)``.
+
+Numbers
+=======
+
+``add_integer(a, b=98)`` returns the sum of its two arguments. For numbers,
+that value is equivalent to using the ``+`` operator.
+
+>>> add_integer = __import__("0-add_integer").add_integer
+
+>>> md = __import__("0-add_integer").__doc__
+>>> len(md) > 1
+True
+
+>>> fstr = __import__("0-add_integer").add_integer.__doc__
+>>> len(fstr) > 1
+True
+
+>>> add_integer(9, 8)
+17
+
+>>> add_integer(3.0, 1)
+4
+>>> add_integer(5.0, 11.230)
+16
+
+Non-Numbers
+===========
+
+>>> add_integer("Holberton", 3)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(34, "9")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'

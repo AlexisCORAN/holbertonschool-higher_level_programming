@@ -1,0 +1,34 @@
+#3-say_my_name.txt
+
+================
+How to use 3-say_my_name.txt
+==================
+
+This library is very simple, since it only has one funcion called
+``say_my_name(first_name, last_name="")`.
+
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+>>> say_my_name("Alexis", "Joker")
+My name is Alexis Joker
+
+>>> say_my_name("Pedro", "Vancuver")
+My name is Pedro Vancuver
+
+>>> say_my_name("Coco")
+My name is Coco 
+
+>>> say_my_name(8.23,"Cabrera")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Kalesy", 12)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+>>> say_my_name("",)
+My name is  

@@ -1,0 +1,67 @@
+#2-matrix_divided.txt
+
+===============================
+How to use 2-matrix_divided.txt
+===============================
+
+This library is very simple, since it only has one funcion called
+´´matrix_divided(matrix, div)´´.
+
+Numbers
+=======
+
+´´matrix_divided(matrix, div)´´ returns a new divided matrix,
+using the "/" operator.
+
+
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+>>> md = __import__("2-matrix_divided").__doc__
+>>> len(md) > 1
+True
+
+>>> fstr = __import__("2-matrix_divided").matrix_divided.__doc__
+>>> len(fstr) > 1
+True
+
+>>> matrix = [[12, 12], [4.34, 90, 67], [10]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix = [(23, 934, 89.32), (1, 98.87, 0)]
+>>> matrix_divided(matrix, 23.2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = []
+>>> matrix_divided(matrix, -9)
+[]
+
+>>> matrix = [[2, 32,64], [323, 68, 34]]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+Non-numbers
+==============
+
+>>> matrix = [["eyes", "hand", "brain"], ["pilot","driver racing"]]
+>>> matrix_divided(matrix, 7)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [[1, 2, 3], [23, 67, 65]]
+>>> matrix_divided(matrix, "A")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+>>> matrix_divided()
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'

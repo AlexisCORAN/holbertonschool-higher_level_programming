@@ -1,0 +1,64 @@
+#5-text_indentation.txt
+
+==================
+How to use 5-text_indentation.txt
+==================
+
+This library is very simple, since it only has one funcion called
+`5-text_indentation`.
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation(5)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+
+>>> text_indentation("")
+
+>>> text_indentation("\n")
+<BLANKLINE>
+
+>>> text_indentation("?\n")
+?
+<BLANKLINE>
+<BLANKLINE>
+
+>>> text_indentation("School")
+School
+
+>>> text_indentation(".")
+.
+<BLANKLINE>
+
+>>> text_indentation(".?")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+
+>>> text_indentation(":.?")
+:
+<BLANKLINE>
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+
+>>> text_indentation(".?:Holberton")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+Holberton
+
+>>> text_indentation("    ?    ")
+?
+<BLANKLINE>
+
+>>> text_indentation("  ")
+
+>>> text_indentation("      ")
+
