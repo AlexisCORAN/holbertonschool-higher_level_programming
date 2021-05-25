@@ -60,6 +60,7 @@ class Rectangle:
             if row < self.__height - 1:
                 string += "\n"
         return string
+
     def __repr__(self):
         """returns a string representation of the rectangle for reproduction"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
