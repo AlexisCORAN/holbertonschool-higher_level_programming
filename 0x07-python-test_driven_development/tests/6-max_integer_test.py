@@ -39,12 +39,12 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_one_negative(self):
         """Tests for list with one negative number"""
-        l = [122, 1, 2, -20, 3, 10]
+        l = [122, 54, 2, -20, 3, 10]
         self.assertEqual(max_integer(l), 122)
 
     def negative_numbers(self):
         """ Tests for list of negative numbers"""
-        l =[-12, -5, -56, -80]
+        l = [-12, -5, -56, -80, -45, 10]
         self.assertEqual(max_integer(l), -5)
 
     def test_empty_list(self):
