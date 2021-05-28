@@ -38,9 +38,14 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(l), 431)
 
     def test_one_negative(self):
-        """Tests for one negative number"""
-        l = [122, 1, 2, -24, 3, 10]
+        """Tests for list with one negative number"""
+        l = [122, 1, 2, -20, 3, 10]
         self.assertEqual(max_integer(l), 122)
+
+    def negative_numbers(self):
+        """ Tests for list of negative numbers"""
+        l =[-12, -5, -56, -80]
+        self.assertEqual(max_integer(l), -5)
 
     def test_empty_list(self):
         """Tests for empty list"""
