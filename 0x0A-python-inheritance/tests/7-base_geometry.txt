@@ -1,0 +1,69 @@
+The ``7-base_geometry`` module
+======================
+Using ``BaseGeometry``
+======================
+
+>>> G = __import__("7-base_geometry").BaseGeometry
+
+>>> md = __import__("7-base_geometry").__doc__
+>>> len(md) > 1
+True
+
+>>> c = __import__("7-base_geometry").BaseGeometry.__doc__
+>>> len(c) > 1
+True
+
+>>> b = G()
+
+>>> b.area(1)
+Traceback (most recent call last):
+...
+TypeError: area() takes 1 positional argument but 2 were given
+
+>>> b.integer_validator("integer", 3)
+
+>>> b.integer_validator("integer", 0)
+Traceback (most recent call last):
+...
+ValueError: integer must be greater than 0
+
+>>> b.integer_validator("integer", -8)
+Traceback (most recent call last):
+...
+ValueError: integer must be greater than 0
+
+>>> b.integer_validator("bool", False)
+Traceback (most recent call last):
+...
+TypeError: bool must be an integer
+
+>>> b.integer_validator("float", 142.9)
+Traceback (most recent call last):
+...
+TypeError: float must be an integer
+
+>>> b.integer_validator("string", "computer")
+Traceback (most recent call last):
+...
+TypeError: string must be an integer
+
+>>> b.integer_validator("list", [1, 2, 3])
+Traceback (most recent call last):
+...
+TypeError: list must be an integer
+
+>>> b.integer_validator("dict", {"holb": "computer"})
+Traceback (most recent call last):
+...
+TypeError: dict must be an integer
+
+>>> b.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> b.integer_validator("integer")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
