@@ -27,5 +27,5 @@ class Student:
                     sel_dic[attr] = class_dic[attr]
 
             return sel_dic
-
-        return class_dic
+        else:
+            return class_dic
