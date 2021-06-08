@@ -45,7 +45,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """getter of x"""
+        """Returns getter of x"""
         return self.__x
 
     @x.setter
@@ -58,8 +58,8 @@ class Rectangle(Base):
         self.__x = value
 
     @property
-    """getter of y"""
     def y(self):
+        """Returns getter of y"""
         return self.__y
 
     @y.setter
