@@ -5,6 +5,7 @@ This module defines the Base class
 
 
 class Base:
+    """Representation of Base class"""
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -14,4 +15,3 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
-
