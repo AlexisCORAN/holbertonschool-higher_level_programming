@@ -77,7 +77,11 @@ class Rectangle(Base):
 
     def display(self):
         """Prints a display of the rectangle"""
+        for row in range(self.__y):
+            print()
         for row in range(self.__height):
+            for column in range(self.__x):
+                print(" ", end="")
             for column in range(self.__width):
                 print('#', end="")
             print()
@@ -89,3 +93,24 @@ class Rectangle(Base):
                                                         self.__y,
                                                         self.__width,
                                                         self.__height))
+
+    def update(self, *args, **kwargs):
+        """Updates the attributes of the rectangle"""
+        attrs = ["id", "width", "height", "x", "y"]
+        if len(args) > 0:
+            for i in range(len(args)):
+                    setattr(self, attrs[i], args[i])
+        elif len(kwargs) > 0:
+            for key, value in kwargs.items():
+                    if key in attrs:
+                        setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Rectangle"""
+        new_dic = {}
+        new_dic["id"] = self.id
+        new_dic["width"] = self.width
+        new_dic["height"] = self.height
+        new_dic["x"] = self.x
+        new_dic["y"] = self.y
+        return (new_dic)
