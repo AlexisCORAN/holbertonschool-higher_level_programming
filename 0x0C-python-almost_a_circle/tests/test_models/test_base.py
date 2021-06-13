@@ -16,6 +16,7 @@ class TestBaseClass(unittest.TestCase):
         """Tests with id as None"""
         b1 = Base()
         self.assertEqual(b1.id, 1)
+
     def test_class_with_id(self):
         """Tests for 1 instance with id"""
         b1 = Base(89)
@@ -29,5 +30,3 @@ class TestBaseClass(unittest.TestCase):
             """Tests for function with empty list"""
         t_json = Base.to_json_string([])
         self.assertEqual(t_json, "[]")
-
-
