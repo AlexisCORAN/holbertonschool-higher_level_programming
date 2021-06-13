@@ -5,6 +5,7 @@ This module defines the Base class
 import json
 from os import path
 
+
 class Base:
     """Representation of Base class"""
     __nb_objects = 0
