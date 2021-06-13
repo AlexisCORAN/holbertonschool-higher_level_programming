@@ -3,16 +3,21 @@
 Unittest of Base class
 """
 import unittest
-from models import base
+from models.base import Base
 
 
-class TestBaseDocs(unittest.TestCase):
-    """Tests to check the documentation"""
+class TestBaseClass(unittest.TestCase):
+    """Tests for base class"""
     def test_module_docstring(self):
         """Tests for the module docstring"""
-        self.assertTrue(len(base.__doc__) >= 1)
+        self.assertTrue(len(Base.__doc__) >= 1)
 
-    def test_class_docstring(self):
-        """Tests for the Base class docstring"""
-        self.assertTrue(len(base.Base.__doc__) >= 1)
-   
+    def test_class_with_id_None(self):
+        """Tests with id as None"""
+        b1 = Base()
+        self.assertEqual(b1.id, 1)
+    def test_class_with_id(self):
+        """Tests for 1 instance with id"""
+        b1 = Base(89)
+        self.assertEqual(b1.id, 89)
+
