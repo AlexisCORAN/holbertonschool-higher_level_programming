@@ -21,3 +21,13 @@ class TestBaseClass(unittest.TestCase):
         b1 = Base(89)
         self.assertEqual(b1.id, 89)
 
+    def test_class_to_json(self):
+        """Tests for function with None"""
+        t_json = Base.to_json_string(None)
+        self.assertEqual(t_json, "[]")
+    def test_class_to_json(self):
+            """Tests for function with empty list"""
+        t_json = Base.to_json_string([])
+        self.assertEqual(t_json, "[]")
+
+
