@@ -3,7 +3,7 @@
 This module defines the Base class
 """
 import json
-
+from os import path
 
 class Base:
     """Representation of Base class"""
@@ -55,3 +55,18 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        filename = cls.__name__ + '.json'
+
+        if path.exists(filename) is False:
+            return []
+
+        with open(filename, mode="r") as f:
+            ob = cls.from_json_string(f.read())
+            instances = []
+            for elem in ob:
+                instances.append(cls.create(**elem))
+
+            return (instances)
