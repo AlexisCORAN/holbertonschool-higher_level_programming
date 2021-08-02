@@ -1,8 +1,7 @@
 #!/usr/bin/node
 const myArgs = process.argv.slice(2);
-if (myArgs[0] === 'undefined') {
+if (typeof myArgs[0] === 'undefined') {
   console.log('No argument');
-}
-else {
+} else {
   console.log(myArgs[0]);
 }
