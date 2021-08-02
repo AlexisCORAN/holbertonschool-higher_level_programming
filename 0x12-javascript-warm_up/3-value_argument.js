@@ -1,8 +1,7 @@
 #!/usr/bin/node
 const myArgs = process.argv.slice(2);
-if (typeof myArgs[0] === 'undefined') {
+if (myArgs[0] === 'undefined') {
   console.log('No argument');
+} else {
+	console.log(myArgs[0]);
 }
-myArgs.forEach((val) => {
-    console.log(`${val}`);
-});
