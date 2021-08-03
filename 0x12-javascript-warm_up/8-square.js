@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const myArgs = process.argv.slice(2);
-if (myArgs.length === 0) {
+if (myArgs.length === 0 || typeof myArgs[0] === 'string') {
   console.log('Missing size');
 } else if (myArgs.length === 1) {
   const value = myArgs[0];
