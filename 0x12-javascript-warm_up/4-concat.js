@@ -1,6 +1,4 @@
 #!/usr/bin/node
-var myArgs = process.argv.slice(2);
+const myArgs = process.argv.slice(2);
 
-let first_value = myArgs[0];
-let second_value = myArgs[1];
-console.log(first_value + ' is ' + second_value);
+console.log(myArgs[0] + ' is ' + myArgs[1]);
