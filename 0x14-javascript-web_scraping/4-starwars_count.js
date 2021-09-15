@@ -23,4 +23,4 @@ function counterfilms (_err, _res, body) {
   }
 
   console.log(times);
-};
+}
